@@ -17,18 +17,37 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-negative-zero' );
+var isNegativeZero = require( 'validate.io-negative-zero' );
 ```
 
-#### foo( value )
+#### isNegativeZero( value )
 
-What does this function do?
+Validates if a `value` is negative zero.
+
+``` javascript
+var value = -0;
+
+var bool = isNegativeZero( value );
+// returns true
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-negative-zero' );
+var isNegativeZero = require( 'validate.io-negative-zero' );
+
+console.log( isNegativeZero( -0 ) );
+// returns true
+
+console.log( isNegativeZero( 0 ) );
+// returns false
+
+console.log( isNegativeZero( '' ) );
+// returns false
+
+console.log( isNegativeZero( null ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,
